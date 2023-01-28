@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+    <body>
+        <nav id="navbar">
+          <header><h1>JavaScript Documentation</h1></header>
+          <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li>
+              <a class="nav-link" href="#Hello_world">Hello world</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Code_structure">Code structure</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#Variables">Variables</a>
+            </li>
+            <li><a class="nav-link" href="#Constants">Constants</a></li>
+ </ul>
+        </nav>
+        <main id="main-doc">
+          <section class="main-section" id="Introduction">
+            <header><h2>Introduction</h2></header>
+            <article>
+            <p>
+                JavaScript was initially created to “make web pages alive”.
+            </p>
+            <p>When JavaScript was created, it initially had another name: “LiveScript”. 
+                But Java was very popular at that time, so it was decided that positioning a
+                 new language as a “younger brother” of Java would help.</p>
+            <p>But as it evolved, JavaScript became a fully independent language with its own
+                 specification called ECMAScript, and now it has no relation to Java at all.</p>
+            <p>Modern JavaScript is a “safe” programming language. It does not provide low-level 
+                access to memory or the CPU, because it was initially created for browsers which do not require it.</p>
+            <p>Some of the things it can do are:<ul>
+                <li>Add new HTML to the page, change the existing content, modify styles.</li>
+                <li>React to user actions, run on mouse clicks, pointer movements, key presses.</li>
+                <li>Get and set cookies, ask questions to the visitor, show messages.</li>
+                <li>Send requests over the network to remote servers, download and upload files (so-called AJAX and COMET technologies).</li>
+                <li>Remember the data on the client-side (“local storage”).</li>
+            </ul></p>
+            <p>JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access 
+                to OS functions.</p>
+            <p>JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from 
+                other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that’s a safety limitation.</p>
+              <p>JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.</p>
+            <p>Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.</p>
+                <p>The ECMA-262 specification contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.</p>
+                <p>MDN (Mozilla) JavaScript Reference is the main manual with examples and other information. It’s great to get in-depth information about individual language functions, methods etc.
+                    You can find it at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference.</p>
+                <code></code>
+                <code></code>
+                <code></code>
+                <code></code>
+                <code></code>
+                <code></code>
+            </article>
+          </section>
+          <section class="main-section" id="Hello_world">
+            <header><h2>Hello world</h2></header>
+            <article>
+              <ul>
+                <li><p>You require a good working environment to run scripts is the browser.</p></li>
+                <li><p>You can use browser-specific commands to achieve for example using alert.</p></li>
+                <li><p>To attach a script to HTML document we use the <code>&lt;script&gt;</code> tag</p></li>
+                <li><P>For instance:</P></li></ul>
+                <code>
+&lt;!DOCTYPE HTML&gt; <br>
+&lt;html&gt; <br>
+<br>
+&lt;body&gt; <br>
+<br>
+  &lt;p&gt;Before the script...&lt;/p&gt; <br>
+  <br>
+  &lt;script&gt; <br>
+    alert( 'Hello, world!' ); <br>
+  &lt;/script&gt; <br>
+  <br>
+  &lt;p&gt;...After the script.&lt;/p&gt; <br>
+  <br>
+&lt;/body&gt;<br>
+<br>
+&lt;/html&gt; <br>
+                </code>
+                <p>The <code>&lt;script&gt;</code> tag contains JavaScript code which is automatically executed 
+                    when the browser processes the tag.</p>
+                <p>If we have a lot of JavaScript code, we can put it into a separate file.</p>
+                <p>Script files are attached to HTML with the src attribute:</p>
+                <code>&lt;script src="/path/to/script/js"&gt;</code>\
+                <p>Here, <code>/path/to/script.js</code> is an absolute path to the script from the site root. </p>
+                <p>One can also provide a relative path from the current page. For instance, <code>src="script.js"</code>, just 
+                    like <code>src="./script.js"</code>, would mean a file <code>"script.js"</code> in the current folder.</p>
+                <p>To attach several scripts, use multiple tags:</p> 
+                <p>
+                    <code>
+                        &lt;script src="/js/script1.js"&gt;&lt;/script&gt; <br>
+                        &lt;script src="/js/script2.js"&gt;&lt;/script&gt;
+                    </code>
+                </p>
+                <h4>Summary</h4>
+                   <p> <ul>
+                        <li>We can use a &lt;script&gt; tag to add JavaScript code to a page.</li>
+                        <li>The type and language attributes are not required.</li>
+                        <li>A script in an external file can be inserted with &lt;script src="path/to/script.js"&gt;&lt;/script&gt;.</li>
+                    </ul>
+                </p>
+            </article>
+          </section>
+          <section class="main-section" id="Code_structure">
+            <header><h2>Code structure</h2></header>
+            <article><ul>
+              <p>The first thing to learn are the building blocks of code</p>
+              <li><h4>Statements</h4></li>
+              <p>Statements are syntax constructs and commands that perform actions.</p>
+              <p>We've already seen a statement,<code>alert('Hello, world!')</code>, which shows the message “Hello, world!”.</p>
+              <p>We can have as many statements in our code as we want. Statements can be separated with a semicolon.</p>
+              <p>For example, here we split “Hello World” into two alerts:</p><br>
+              <code>alert('Hello'); alert('World');</code><br>
+              <p>Usually, statements are written on separate lines to make the code more readable:</p>
+              <code>alert('Hello'); <br> alert('World');</code>
+              <li><h5>Semicolons</h5></li>
+              <p>A semicolon may be omitted in most cases when a line break exists.</p>
+              <p>This would also work:</p>
+              <code>alert('Hello') <br> alert('World')</code>
+              <p>Here, JavaScript interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.</p>
+              <p>it is recommended to put semicolons between statements even if they are separated by newlines.</p>
+              <li><h5>Comments</h5></li>
+              <p>As time goes on, programs become more and more complex. It becomes necessary to add comments which describe what the code does and why.
+                Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+                One-line comments start with two forward slash characters //.For example:
+              </p>
+              <code>// This comment occupies a line of its own <br> alert('Hello');</code>
+              <p>Multiline comments start with a forward slash and an asterisk /* and end with an asterisk and a forward slash */.For example:</p>
+              <code>/* An example with two messages.
+                This is a multiline comment.
+                */ <br>
+                alert('Hello'); <br>
+                alert('World');</code>
+                <p>Sometimes it can be handy to temporarily disable a part of code:</p>
+                <li></li>
+                <li></li>
+              </ul>
+            </article>
+          </section>
+          <section class="main-section" id="Variables">
+            <header><h2>Variables</h2></header>
+            <article>
+              <p>Most of the time, a JavaScript application needs to work with information. Here are two examples:</p>
+              <ol>
+                <li>An online shop - the information might include goods being sold and a shopping cart.</li>
+                <li>A chat application - the information might include users, messages, and much more.</li>
+              </ol>
+              <p>Variables are used to store this information.</p>
+              <ul>
+                <h5>A variable</h5>
+                <li><p>This is a "named storage” for data.To create a variable in JavaScript, use the <code> let </code> keyword.</p></li>
+                <li><p>The statement below creates (in other words: declares) a variable with the name “message”:</p></li>
+                <p><code> let message; </code></p>
+                <li><p>Now, we can put some data into it by using the assignment operator =:</p></li>
+                <p><code>let message; <br>
+                  message = 'Hello'; // store the string 'Hello' in the variable named message</code></p>
+              <li><p>The string is now saved into the memory area associated with the variable. We can access it using the variable name:</p></li>
+              <p><code>let message;<br>
+                message = 'Hello!';<br>
+                alert(message); // shows the variable content</code></p>
+                <p>To be concise, we can combine the variable declaration and assignment into a single line:</p>
+                <p><code>let message = 'Hello!'; // define the variable and assign the value <br>
+                  alert(message); // Hello!
+                  </code></p>
+                <p>We can also declare multiple variables in one line:</p>
+                <p><code>let user = 'John', age = 25, message = 'Hello';</code></p>
+                <p>That might seem shorter, but we don't recommend it. For the sake of better readability, please use a single line per variable.</p>
+              </ul>
+            </article>
+          </section>
+          <section class="main-section" id="Constants">
+            <header><h2>Constants</h2></header>
+            <article>
+              <p>To declare a constant (unchanging) variable, use const instead of let:</p>
+              <code>const myBirthday = '18.04.1982';</code> <br>
+              <p>Variables declared using const are called “constants”. They cannot be reassigned. 
+                An attempt to do so would cause an error:</p>
+                <code>const myBirthday = '18.04.1982'; <br>
+                  myBirthday = '01.01.2001'; // error, can't reassign the constant!</code> 
+              <p>When a programmer is sure that a variable will never change, they can declare it with 
+                const to guarantee and clearly communicate that fact to everyone.</p>
+              <h4>Uppercase Constants</h4>
+              <p>There is a widespread practice to use constants as aliases for difficult-to-remember 
+                values that are known prior to execution.</p>
+              <p>Such constants are named using capital letters and underscores.</p>
+              <p>For instance, let's make constants for colors in so-called “web” (hexadecimal) format:</p>
+              <p><code>
+                const COLOR_RED = "#F00"; <br>
+                const COLOR_GREEN = "#0F0"; <br>
+                const COLOR_BLUE = "#00F"; <br>
+                const COLOR_ORANGE = "#FF7F00"; <br>
+                // ...when we need to pick a color <br>
+                let color = COLOR_ORANGE;<br>
+                alert(color); // #FF7F00
+              </code></p>
+              <h5>Benefits</h5>
+              <p><ul>
+                <li>COLOR_ORANGE is much easier to remember than "#FF7F00".</li>
+                <li>It is much easier to mistype "#FF7F00" than COLOR_ORANGE.</li>
+                <li>When reading the code, COLOR_ORANGE is much more meaningful than #FF7F00.
+                </li>
+              </ul></p>
+              <p>When should we use capitals for a constant and when should we name it normally? Let's make that clear.</p>
+              <p>Being a “constant” just means that a variable's value never changes. But there are constants that are
+                 known prior to execution (like a hexadecimal value for red) and there are constants that are calculated 
+                 in run-time, during the execution, but do not change after their initial assignment.
+              </p>
+              <p>For instance:</p><br>
+              <code>const pageLoadTime = /* time taken by a webpage to load */;</code><br>
+              <p>The value of pageLoadTime is not known prior to the page load, so it's named normally. But it's still a
+                 constant because it doesn't change after assignment.
+                 In other words, capital-named constants are only used as aliases for “hard-coded” values.
+              </p>
+              <p>Some good rules to follow when dealing with variables are:</p>
+              <ul>
+                <li>Use human-readable names like userName or shoppingCart.</li>
+                <li>Stay away from abbreviations or short names like a, b, c, unless you really know what you're doing.</li>
+                <li>Make names maximally descriptive and concise. </li>
+              </ul>
+              <code></code>
+            </article>
+          </section>
+        </main>
+    </body>
+</html>

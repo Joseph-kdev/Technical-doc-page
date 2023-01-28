@@ -1,0 +1,44 @@
+h1{
+    font-size: 1.9em;
+}
+#navbar{
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    min-width: 260px;
+    width: 280px;
+    height: 100%;
+    border: 1px goldenrod solid;
+}
+#main-doc{
+    position: absolute;
+    margin-left: 300px;
+    padding-left: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.nav-link{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 2em;
+    text-decoration: none;
+    
+}
+#navbar ul{
+    height: 88%;
+    padding: 0;
+}
+#navbar li{
+    border: 1px blue solid;
+    position: relative;
+    list-style: none;
+    width: 100%;
+    display: list-item;
+}
+.main-section{
+    margin-right: 8%;
+    border: 2px pink solid;
+
+}
+
