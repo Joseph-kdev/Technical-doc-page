@@ -1,44 +1,64 @@
 h1{
     font-size: 1.9em;
+    color: beige;
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1602250829481-12309c45eb63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8eWVsbG93JTIwdGV4dHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
 }
 #navbar{
     position: fixed;
     top: 0px;
     left: 10px;
-    min-width: 260px;
-    width: 280px;
+    min-width: 250px;
+    width: 260px;
     height: 100%;
-    border: 1px goldenrod solid;
+    
 }
 #main-doc{
     position: absolute;
-    margin-left: 300px;
+    margin-left: 270px;
     padding-left: 2%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.5em;
+    border-radius: 40px;
+    background-color: #FBEA00;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    margin-right: 6%;
 }
 .nav-link{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
     line-height: 2em;
     text-decoration: none;
-    
+    color: #fff;
 }
 #navbar ul{
     height: 88%;
     padding: 0;
 }
 #navbar li{
-    border: 1px blue solid;
     position: relative;
     list-style: none;
     width: 100%;
     display: list-item;
 }
+a:hover{
+    color:yellow;
+}
 .main-section{
-    margin-right: 8%;
-    border: 2px pink solid;
-
+    margin-right: 4%;
+    background-color: #fff462;
+    padding: 2%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-radius: 43px;
+    -webkit-border-radius: 43px;
+    -moz-border-radius: 43px;
+    -ms-border-radius: 43px;
+    -o-border-radius: 43px;
 }
 
