@@ -1,64 +1,152 @@
 h1{
-    font-size: 1.9em;
-    color: beige;
+    font-size: 1.7em;
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .05em dotted orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
 }
 body {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1602250829481-12309c45eb63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8eWVsbG93JTIwdGV4dHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
 }
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
 #navbar{
-    position: fixed;
-    top: 0px;
-    left: 10px;
-    min-width: 250px;
-    width: 260px;
-    height: 100%;
-    
-}
-#main-doc{
-    position: absolute;
-    margin-left: 270px;
-    padding-left: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.5em;
-    border-radius: 40px;
     background-color: #FBEA00;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-    margin-right: 6%;
+    opacity: 0.6;
+    border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    -moz-border-radius: 1.5em;
+    -ms-border-radius: 1.5em;
+    -o-border-radius: 1.5em;
+    padding: 2%;
+    margin-bottom: 0%;
+}
+#navbar ul {
+    list-style: none;
+    font-size: 1.2em;
+    padding: 0px;
 }
 .nav-link{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 22px;
-    line-height: 2em;
     text-decoration: none;
-    color: #fff;
+    color: #212529;
 }
-#navbar ul{
-    height: 88%;
-    padding: 0;
+#navbar li {
+    padding: 1.2%;
+    border: #fff solid;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    text-align: center;
+    margin-top: 1%;
 }
-#navbar li{
-    position: relative;
-    list-style: none;
-    width: 100%;
-    display: list-item;
-}
-a:hover{
-    color:yellow;
-}
-.main-section{
-    margin-right: 4%;
-    background-color: #fff462;
-    padding: 2%;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    border-radius: 43px;
-    -webkit-border-radius: 43px;
-    -moz-border-radius: 43px;
-    -ms-border-radius: 43px;
-    -o-border-radius: 43px;
+#navbar li:hover {
+    background-color: #9a8f00;
 }
 
+#main-doc {
+    background-color: #9a8f00;
+    opacity: 0.7;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.12em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-section{
+    padding: 0.01% 2% 1% 2%;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    margin: 2%;
+    background-color: #fff462;
+    opacity: 0.7;
+    line-height: 1.5em;
+}
+.main-section:hover{
+    opacity: 1;
+}
+
+.main-section h2 {
+    margin-top: 2%;
+    text-align: center;
+}
+
+@media screen and (min-width : 768px) {
+    #navbar{
+        position: fixed;
+        top: 0px;
+        left: 10px;
+        min-width: 250px;
+        width: 260px;
+        height: 100%;
+    }
+    #main-doc{
+        position: absolute;
+        margin-left: 270px;
+        padding-left: 2%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 1.5em;
+        border-radius: 40px;
+        background-color: #FBEA00;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+        margin-right: 6%;
+    }
+    .nav-link{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 22px;
+        line-height: 2em;
+        text-decoration: none;
+        color: #fff;
+    }
+    #navbar ul{
+        height: 88%;
+        padding: 0;
+    }
+    #navbar li{
+        position: relative;
+        list-style: none;
+        width: 100%;
+        display: list-item;
+    }
+    a:hover{
+        color:yellow;
+    }
+    .main-section{
+        margin-right: 4%;
+        background-color: #fff462;
+        padding: 2%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        border-radius: 43px;
+        -webkit-border-radius: 43px;
+        -moz-border-radius: 43px;
+        -ms-border-radius: 43px;
+        -o-border-radius: 43px;
+    }
+}
