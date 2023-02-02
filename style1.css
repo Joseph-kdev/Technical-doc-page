@@ -11,6 +11,7 @@ h1{
 }
 body {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1602250829481-12309c45eb63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8eWVsbG93JTIwdGV4dHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-attachment: fixed;
 }
   /* The typing effect */
   @keyframes typing {
@@ -94,18 +95,29 @@ body {
 }
 
 @media screen and (min-width : 768px) {
+    h1{
+        all: unset;
+        font-size: 2em;
+        text-align: center;
+
+    }
     #navbar{
         position: fixed;
         top: 0px;
-        left: 10px;
-        min-width: 250px;
+        left: 0;
         width: 260px;
         height: 100%;
-    }
+        border-radius: 0%;
+        -webkit-border-radius: 0%;
+        -moz-border-radius: 0%;
+        -ms-border-radius: 0%;
+        -o-border-radius: 0%;
+}
     #main-doc{
-        position: absolute;
-        margin-left: 270px;
-        padding-left: 2%;
+        position: relative;
+        left: 320px;
+        margin: 0 2%;
+        width: 850px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
         line-height: 1.5em;
@@ -131,7 +143,7 @@ body {
     #navbar li{
         position: relative;
         list-style: none;
-        width: 100%;
+        width: 95%;
         display: list-item;
     }
     a:hover{
